@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+
+/* Фоновий нейтральний колір під тайли Google Maps */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e3df !important;
+  font-family: inherit;
+}
+
+/* Стилізація кнопок зуму в стилі Google Maps */
+.leaflet-bar {
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
+  border: none !important;
+}
+
+.leaflet-bar a {
+  background-color: #FFFFFF !important;
+  color: #3C4043 !important;
+  border-bottom: 1px solid #E8EAED !important;
+  width: 34px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  transition: all 0.15s ease;
+}
+
+.leaflet-bar a:hover {
+  background-color: #F8F9FA !important;
+  color: #1A73E8 !important;
+}
+
+/* Тултіп самоката в стилі Google Maps */
+.bolt-tooltip {
+  background-color: #12161A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #34D186 !important;
+  border-radius: 8px !important;
+  padding: 4px 8px !important;
+  font-size: 11px !important;
+  font-family: inherit !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+.bolt-tooltip:before {
+  border-top-color: #12161A !important;
+}
+
+/* Інтерактивний попап меню над самокатом */
+.bolt-map-popup .leaflet-popup-content-wrapper {
+  background-color: #12161A !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid #34D186 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7) !important;
+  padding: 6px !important;
+}
+
+.bolt-map-popup .leaflet-popup-tip {
+  background-color: #12161A !important;
+  border: 1.5px solid #34D186 !important;
+}
+
+.bolt-map-popup .leaflet-popup-close-button {
+  color: #94A3B8 !important;
+  padding: 8px !important;
+}
+
+/* Стилізований скролбар */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181E24;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2C353F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #34D186;
+}
+
+/* Пульсуючий ефект для активних самокатів */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(52, 209, 134, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(52, 209, 134, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(52, 209, 134, 0);
+  }
+}
+
+.scooter-marker-pulse {
+  animation: pulse-ring 2s infinite;
+}

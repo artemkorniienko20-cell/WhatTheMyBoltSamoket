@@ -1,0 +1,14 @@
+{
+  "name": "whatthemyboltsamoket",
+  "version": "1.0.0",
+  "description": "WhatTheMyBoltSamoket — Інтерактивна карта електросамокатів Bolt по всіх районах міст України",
+  "scripts": {
+    "server": "node server/src/index.js",
+    "client": "npm.cmd --prefix client run dev",
+    "build": "npm.cmd --prefix client run build",
+    "start": "node server/src/index.js"
+  },
+  "keywords": ["bolt", "scooters", "ukraine", "map", "leaflet"],
+  "author": "",
+  "license": "ISC"
+}

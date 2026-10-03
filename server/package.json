@@ -1,0 +1,16 @@
+{
+  "name": "whatthemyboltsamoket-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "WhatTheMyBoltSamoket Backend Proxy & Ukraine Scooter Simulation API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
