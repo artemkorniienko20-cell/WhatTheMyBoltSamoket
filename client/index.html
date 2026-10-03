@@ -2,9 +2,27 @@
 <html lang="uk" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2334D186'><path d='M15.5 5.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM12 9l-2.5 6H5a3 3 0 1 0 0 2h5.5l2.2-5.3 2.8 2.8V17a3 3 0 1 0 2 0v-3.5L14.7 10.7 16 9h3V7h-4.5L12 9z'/></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>WhatTheMyBoltSamoket — Електросамокати Bolt по всій Україні</title>
+
+    <!-- Іконка у вкладці браузера -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2334D186'><path d='M15.5 5.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM12 9l-2.5 6H5a3 3 0 1 0 0 2h5.5l2.2-5.3 2.8 2.8V17a3 3 0 1 0 2 0v-3.5L14.7 10.7 16 9h3V7h-4.5L12 9z'/></svg>" />
+
+    <!-- Підтримка встановлення на початковий екран iPhone (iOS Apple Touch Icon & Web App) -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="BoltSamoket" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon.png" />
+
+    <!-- Web App Manifest (PWA) -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#12161A" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Карти Leaflet та шрифти -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -15,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-bolt-black text-slate-100 antialiased overflow-hidden font-sans">
+  <body class="bg-bolt-black text-slate-100 antialiased overflow-hidden font-sans select-none">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

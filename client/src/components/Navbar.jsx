@@ -1,11 +1,12 @@
 import React from 'react';
-import { Zap, Navigation, BarChart3, ShieldCheck, ShieldAlert, RefreshCw } from 'lucide-react';
+import { Zap, Navigation, BarChart3, ShieldCheck, ShieldAlert, RefreshCw, Smartphone } from 'lucide-react';
 
 export default function Navbar({
   selectedCity,
   scootersCount,
   onOpenStats,
   onOpenAuth,
+  onOpenIosInstall,
   onLocateUser,
   isLocating,
   onRefresh,
@@ -82,7 +83,17 @@ export default function Navbar({
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-bolt-darkCard hover:bg-bolt-darkBorder border border-bolt-darkBorder text-xs font-medium text-slate-200 hover:text-white transition-all shadow-sm"
         >
           <BarChart3 className="w-4 h-4 text-blue-400" />
-          <span className="hidden sm:inline">Аналітика районів</span>
+          <span className="hidden sm:inline">Аналітика</span>
+        </button>
+
+        {/* Встановити на iPhone */}
+        <button
+          onClick={onOpenIosInstall}
+          title="Встановити на початковий екран iPhone"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-bolt-green/10 hover:bg-bolt-green/20 border border-bolt-green/30 text-xs font-bold text-bolt-greenLight transition-all shadow-sm active:scale-95"
+        >
+          <Smartphone className="w-4 h-4 text-bolt-green" />
+          <span className="hidden sm:inline">На iPhone</span>
         </button>
 
         {/* Режим Bolt API */}

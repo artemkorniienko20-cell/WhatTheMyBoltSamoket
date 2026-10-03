@@ -8,6 +8,7 @@ import ScooterDrawer from './components/ScooterDrawer';
 import StatsModal from './components/StatsModal';
 import BoltAuthModal from './components/BoltAuthModal';
 import PanoramaModal from './components/PanoramaModal';
+import IosInstallModal from './components/IosInstallModal';
 
 export default function App() {
   const [cities, setCities] = useState([]);
@@ -45,6 +46,7 @@ export default function App() {
   const [isPanoramaOpen, setIsPanoramaOpen] = useState(false);
   const [panoramaScooter, setPanoramaScooter] = useState(null);
   const [toastMessage, setToastMessage] = useState(null);
+  const [isIosInstallOpen, setIsIosInstallOpen] = useState(false);
 
   // 1. Завантаження списку міст при старті
   useEffect(() => {
@@ -257,6 +259,7 @@ export default function App() {
         scootersCount={scooters.length}
         onOpenStats={() => setIsStatsOpen(true)}
         onOpenAuth={() => setIsAuthOpen(true)}
+        onOpenIosInstall={() => setIsIosInstallOpen(true)}
         onLocateUser={handleLocateUser}
         isLocating={isLocating}
         onRefresh={fetchScooters}
@@ -346,6 +349,12 @@ export default function App() {
         isOpen={isPanoramaOpen}
         onClose={() => setIsPanoramaOpen(false)}
         scooter={panoramaScooter}
+      />
+
+      {/* 7. Інструкція встановлення на iPhone */}
+      <IosInstallModal
+        isOpen={isIosInstallOpen}
+        onClose={() => setIsIosInstallOpen(false)}
       />
     </div>
   );

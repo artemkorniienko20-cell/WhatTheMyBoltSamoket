@@ -1,0 +1,29 @@
+{
+  "name": "WhatTheMyBoltSamoket — Електросамокати Bolt",
+  "short_name": "BoltSamoket",
+  "description": "Інтерактивна карта та моніторинг електросамокатів Bolt по всіх районах міст України",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#12161A",
+  "theme_color": "#12161A",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
